@@ -25,4 +25,8 @@ app.use("/api/prodi", prodiRoutes);
 app.use("/api/pinjam", pinjams);
 app.use("/api/detail_pinjam", detail_pinjams);
 app.use("/api/user", User);
+app.get('/',(req,res)=>{
+res.json({message:"Hello coba backend untuk vercel"});
+});
 app.listen(5000);
+
