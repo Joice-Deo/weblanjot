@@ -26,7 +26,7 @@ try {
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/buk", bukuRoutes);
+app.use("/api/buk",authenticateToken, bukuRoutes);
 app.use("/api/mahasiswa", mahasiswaRoutes);
 app.use("/api/prodi", prodiRoutes);
 app.use("/api/pinjam", pinjams);
