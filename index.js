@@ -1,3 +1,4 @@
+import { authenticateToken } from "../middleware/VerifyTokens.js";
 import express from "express";
 import db from "./config/db.config.js";
 import bukuRoutes from "./routes/buku.routes.js";
@@ -5,7 +6,6 @@ import prodiRoutes from "./routes/prodi.routes.js";
 import mahasiswaRoutes from "./routes/mahasiswa.routes.js";
 import pinjams from "./routes/pinjams.routes.js";
 import detail_pinjams from "./routes/detail_pinjam.routes.js";
-import { authenticateToken } from "../middleware/VerifyTokens.js";
 import cors from "cors";
 import User from "./routes/user.routes.js";
 import dotenv from "dotenv";
