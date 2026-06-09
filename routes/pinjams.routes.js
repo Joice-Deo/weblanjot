@@ -13,7 +13,7 @@ import {
 } from "../controllers/pinjams.controllers.js";
 
 const router = express.Router();
-router.get("/", getAllPinjam);
+router.get("/",authenticateToken, getAllPinjam);
 router.patch("/kembali/:id",updatePengembalian);
 //router.get("/:id", cariPinjamByID);//
 //router.patch("/:id", updatePinjam);
