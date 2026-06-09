@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/buk", authenticateToken, bukuRoutes);
-app.use("/api/mahasiswa", mahasiswaRoutes);
+app.use("/api/mahasiswa",authenticateToken, mahasiswaRoutes);
 app.use("/api/prodi", prodiRoutes);
 app.use("/api/pinjam", pinjams);
 app.use("/api/detail_pinjam", detail_pinjams);
