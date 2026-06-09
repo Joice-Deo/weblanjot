@@ -12,9 +12,16 @@ dotenv.config ();
 const app = express();
 try {
   await db.authenticate();
-  console.log("database ok");
+  console.log("Database connected");
+
+  await db.sync({ force: true });
+  console.log("Tables created");
+
+  app.listen(5000, () => {
+    console.log("Server running on port 5000");
+  });
 } catch (error) {
-  console.log("belum konek", error);
+  console.error(error);
 }
 app.use(cors());
 app.use(express.json());
