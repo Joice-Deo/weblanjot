@@ -14,7 +14,7 @@ try {
   await db.authenticate();
   console.log("Database connected");
 
-  await db.sync({ force: true });
+  await db.sync();
   console.log("Tables created");
 
   app.listen(5000, () => {
