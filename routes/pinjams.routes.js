@@ -1,4 +1,5 @@
 import express from "express";
+import { authenticateToken } from "../middleware/VerifyTokens.js";
 import {
     getAllPinjam,
     tambahpinjambaru,
